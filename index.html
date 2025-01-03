@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <Link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interactive Voting System</h1>
+            <p>Make your voice heard!</p>
+        </header>
+        
+        <main>
+            <section class="interactive-section">
+                
+                <!-- Theme Toggle -->
+                 <button id="themeToggle" class="theme-btn">
+                    Dark Mode
+                 </button>
+
+                 <!-- Text Size Slider -->
+                  <div class="slider-container">
+                    <label for="textSize">Text Size:</label>
+                    <input type="range" id="textSize" min="12" max="24" value="16">
+                    <p id="sampleText">Increased Font  Size to: 16px</p>         
+                  </div>
+
+                  <!-- Category Selection -->
+                    <div class="select-container">
+                        <label for="category">Select Voting Category</label>
+                        <select id="category">
+                            <option value="">Choose a Category</option>
+                            <option value="environment">Environmental Issues</option>
+                            <option value="education">Education Reform</option>
+                            <option value="healthcare">Healthcare Policy</option>
+                            <option value="technology">Technology Innovation</option>
+                        </select>
+                        <p id="categoryMessage">Please select a category to vote</p>
+                    </div>
+
+                    <!-- Guidelines Button -->
+                     <button id="guidelinesBtn" class="btn">View Guidelines</button>
+            </section>
+
+            <section class="form-section">
+                <h2>Register to Vote</h2>
+                <form id="votingForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required>
+                        <span class="error" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                        <span class="error" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required>
+                        <span class="error" id="passwordError"></span>
+                    </div>
+
+                    <button type="submit" class="btn">Register</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Modal -->
+         <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Voting Guidelines</h2>
+                <ul>
+                    <li>You Must be registered to vote</li>
+                    <li>You can only vote once per category</li>
+                    <li>Your vote is confidential and secure</li>
+                </ul>
+            </div>
+         </div>
+    </div>
+  <script src="script.js"></script>  
+</body>
+</html>
